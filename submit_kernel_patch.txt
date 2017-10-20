@@ -1,0 +1,60 @@
+1.git config
+apt-get install git-email
+
+cat ~/.gitconfig
+
+[user]
+        email = wuqixuan@huawei.com
+        name = Qixuan Wu
+[http]
+        proxy = http://user:pass@proxy:8080
+        sslVerify = false
+[https]
+        proxy = http://user:pass@proxy:8080
+        sslVerify = false
+
+[sendemail]
+        smtpserver = /usr/bin/msmtp
+        from = Qixuan Wu <wuqixuan@huawei.com>
+
+2.Write code
+
+git checkout master
+git pull           #get latest code
+git checkout -b $FEATURE  #create feature branch
+...                #write code
+git add $FILE
+git commit -s -v
+git format-patch -2 --cover-letter # need 2 patch
+./scripts/checkpatch.pl 000*
+
+3. sendmail config
+cat ~/.msmtprc
+
+defaults
+account default
+host smtpscn.huawei.com
+port 25
+from wuqixuan@huawei.com
+auth login
+tls on
+tls_certcheck off
+user $DOMAIN_USER 
+password $PASSWD
+
+4. sendmail.
+./scripts/get_maintainer.pl 000*
+git send-email 000* --to wuqixuan@huawei.com 
+					--to corbet@lwn.net 
+					--cc paulmck@linux.vnet.ibm.com 
+					--cc akpm@linux-foundation.org 
+					--cc tglx@linutronix.de 
+					--cc cdall@linaro.org 
+					--cc mingo@kernel.org 
+					--cc marc.zyngier@arm.com 
+					--cc mchehab@kernel.org 
+					--cc zohar@linux.vnet.ibm.com 
+					--cc linux-doc@vger.kernel.org 
+					--cc linux-kernel@vger.kernel.org 
+					--cc squashfs-devel@lists.sourceforge.net
+
