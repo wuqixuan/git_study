@@ -1,0 +1,8 @@
+1. How to Submit to Kernel
+https://mp.weixin.qq.com/s/34Gna2jHGZ82b1wqkXrJqw (Same as: http://blog.chinaunix.net/uid-25845340-id-5769625.html)
+https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/translations/zh_CN/SubmittingPatches?h=v4.14-rc4
+http://mirage1993.blog.51cto.com/2709744/1912785
+http://www.voidcn.com/article/p-dwjfteic-ru.html (there are many in the end of this page)
+
+2. About Git
+
