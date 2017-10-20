@@ -1,0 +1,10 @@
+1. Add code
+ git add .   # git add . is for all files, git add $FILE for just one file
+ git commit -s -v
+ git push    # push to current branch or master ? 
+
+2. Modify the last commit
+ git add .
+ git commit --amend
+ git push -f origin # if the last commit which has been pushed already. 
+
