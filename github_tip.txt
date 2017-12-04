@@ -8,3 +8,15 @@
  git commit --amend
  git push -f origin # if the last commit which has been pushed already. 
 
+3. remote git repository
+ git remote -v  # look all remote git hub, so my own git hub is named "origin"
+ git remote add upstream https://github.com/docker/docker.git    #add a upstream git hub, not the one forked, so docker git hub is named "upstream"
+ git fetch upstream         #only fetch the remote upstream repository
+ git fetch origin           #only fetch the remote origin repository
+ git pull (origin master)   # pull = fetch origin master + merge to current local branch
+ #www.zhihu.com/question/27712995
+ #https://git-scm.com/book/zh/v1
+
+4. merge
+ git merge branch           #merge log of branch to current branch
+
