@@ -1,0 +1,29 @@
+1. tags
+  apt-get install exuberant-ctags
+
+  ctags -R * # Build the database
+
+  :ts        # See the definition
+  :ta        # Jump to the first
+  :tj        # List multiple
+  :tp
+  :tn 
+  ctrl+]     # jump to implement
+  ctrl+t     # jump back
+
+2. taglist
+  http://www.vim.org/scripts/script.php?script_id=273
+  
+  cp * ~/.vim/.
+
+cat ~/.vimrc
+
+let Tlist_Auto_Open=1
+set tags=tags;
+set autochdir;
+
+  ctrl+w+w  #switch between two windows
+
+4. ref
+  http://blog.csdn.net/darennet/article/details/9387233
+
