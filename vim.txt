@@ -18,12 +18,42 @@
 
 cat ~/.vimrc
 
+syntax on
 let Tlist_Auto_Open=1
-set tags=tags;
-set autochdir;
+let Tlist_WinWidth=40
+let Tlist_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
+let Tlist_Process_File_Always=1
+set tags=tags
+noremap <F8> :TlistToggle<CR>
+noremap <F6> :!ctags -R<CR>
+let NERDTreeWinPos='right'
+noremap <F9> :NERDTreeToggle<CR>
 
   ctrl+w+w  #switch between two windows
 
-4. ref
+3. cscope
+  apt-get install cscope
+
+  cscope -Rbq    #will create cscope.out
+  :cs add $PATH/cscope.out .........
+  :cs find c function     #who call this function
+  :cs find s symbol       #
+  :cs find g definition
+  :cs find d function     #this function call whom
+  :cs find t string
+  :cs find f file
+  :cs find i include_file #which file include this inc file
+
+4. nerdtree
+  http://www.vim.org/scripts/script.php?script_id=1658
+
+  cp doc/* ~/.vim/doc/.
+  cp nerdtree_plugin/* plugin/* syntax/* to ~/.vim/plugin/.
+
+5. ref
+  http://www.cnblogs.com/zhangsf/archive/2013/06/13/3134409.html
+  http://blog.csdn.net/luckywang1103/article/details/44181557
+  http://blog.csdn.net/scaleqiao/article/details/44278719
   http://blog.csdn.net/darennet/article/details/9387233
 
