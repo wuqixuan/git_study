@@ -25,5 +25,5 @@
  git rebase branch          #rebase to branch, and base on that apply current branch patch to it
 
 6. branch
- git push origin a:a        #add one branch to remote
+ git push origin a:a        #add or update one branch to remote
  git push origin  :a        #delete one branch of remote
