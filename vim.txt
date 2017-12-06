@@ -1,3 +1,8 @@
+0. vim
+  apt-get install vim vim-scripts vim-doc
+
+  http://vimcdoc.sourceforge.net/doc/help.html
+
 1. tags
   apt-get install exuberant-ctags
 
@@ -10,6 +15,7 @@
   :tn 
   ctrl+]     # jump to implement
   ctrl+t     # jump back
+  ctrl+w+]   #review windows
 
 2. taglist
   http://www.vim.org/scripts/script.php?script_id=273
@@ -29,6 +35,10 @@ noremap <F8> :TlistToggle<CR>
 noremap <F6> :!ctags -R<CR>
 let NERDTreeWinPos='right'
 noremap <F9> :NERDTreeToggle<CR>
+set mouse=a
+set number
+set previewwindow
+set history=50
 
   ctrl+w+w  #switch between two windows
 
