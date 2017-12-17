@@ -61,7 +61,11 @@ set history=50
   cp doc/* ~/.vim/doc/.
   cp nerdtree_plugin/* plugin/* syntax/* to ~/.vim/plugin/.
 
-5. ref
+5. vim addon
+  apt-get install vim-addon-manager
+  vim-addons status
+
+6. ref
   http://www.cnblogs.com/zhangsf/archive/2013/06/13/3134409.html
   http://blog.csdn.net/luckywang1103/article/details/44181557
   http://blog.csdn.net/scaleqiao/article/details/44278719
